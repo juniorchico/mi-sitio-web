@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMULARIO</title>
+    <!-- Enlace a la hoja de estilo CSS personalizada -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlace a la biblioteca de Bootstrap (CDN) -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Formulario</title>
+      <!-- Favicon -->
+      <link rel="icon" href="IMAGENES/favicon.jpg" type="image/png" />
+      <!-- O si está en una subcarpeta, usa una ruta relativa -->
+      <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
+
+      <link rel="stylesheet" href="styles.css" />
+      <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+    </head>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-4">
+      <a href="inicio.html" class="btn btn-info">Ir a la Subpágina de Inicio</a>
+      <h1>Formulario de Registro</h1>
+      <p>Complete el siguiente formulario para registrarse</p>
+    </header>
+
+    <!-- Cuerpo de la página -->
+    <main class="container mt-5">
+      <form action="/submit" method="POST">
+        <div class="row">
+          <!-- Nombre -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="correo">Correo Electrónico:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correo"
+                name="correo"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Edad -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="edad">Edad:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edad"
+                name="edad"
+                required
+                min="18"
+                max="100"
+              />
+            </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selección de Género -->
+        <div class="form-group">
+          <label for="genero">Género:</label>
+          <select class="form-control" id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <!-- Casillas de Verificación -->
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="terminos"
+            name="terminos"
+            required
+          />
+          <label class="form-check-label" for="terminos"
+            >Acepto los términos y condiciones</label
+          >
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </main>
+    <section id="contacto" class="container mt-5">
+      <h2>Contacto</h2>
+      <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos.</p>
+      <form>
+        <div class="form-group">
+          <label for="contactNombre">Nombre:</label>
+          <input type="text" class="form-control" id="contactNombre" required />
+        </div>
+        <div class="form-group">
+          <label for="contactCorreo">Correo:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="contactCorreo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="contactMensaje">Mensaje:</label>
+          <textarea
+            class="form-control"
+            id="contactMensaje"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <section id="acerca-de" class="container mt-5">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Somos un equipo dedicado a brindar experiencias web únicas y
+          funcionales. Este formulario es parte de nuestra misión de facilitar
+          la interacción en línea.
+        </p>
+      </section>
+      <!-- Enlaces de redes sociales -->
+      <div class="text-center mt-5">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          class="btn btn-outline-primary btn-lg mr-3"
+        >
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="btn btn-outline-info btn-lg mr-3"
+        >
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          class="btn btn-outline-success btn-lg"
+        >
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+      </div>
+
+      <!-- Incluir Font Awesome para los íconos -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      />
+
+      <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Mi Sitio Web</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formulario">Formulario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Botón para volver arriba -->
+    <button onclick="topFunction()" id="myBtn" class="btn btn-secondary">
+      Volver Arriba
+    </button>
+
+    <script>
+      // Obtener el botón
+      var mybutton = document.getElementById("myBtn");
+
+      // Cuando el usuario se desplace hacia abajo 20px desde la parte superior de la página, mostrar el botón
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Cuando el usuario hace clic en el botón, vuelve al principio de la página
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
